@@ -11,3 +11,4 @@
 ### Módulo intermediário 
 
 ✔ - Propriedades, Métodos e Construtores com C#<br>
+✔ - Manipulando Valores com C#<br>

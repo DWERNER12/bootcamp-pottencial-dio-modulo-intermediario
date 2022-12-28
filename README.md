@@ -12,3 +12,4 @@
 
 ✔ - Propriedades, Métodos e Construtores com C#<br>
 ✔ - Manipulando Valores com C#<br>
+✔ - Exceções e Coleções com C#<br>

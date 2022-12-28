@@ -3,6 +3,146 @@ using ExemploExplorando.Models;
 using System.Globalization;
 
 
+Dictionary<string, string> estados = new Dictionary<string, string>();
+
+estados.Add("SP", "São Paulo");
+estados.Add("MG", "Minas Gerais");
+estados.Add("BA", "Bahia");
+
+Console.WriteLine(estados["MG"]);
+
+foreach (var item in estados)
+{
+    Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+}
+
+
+Console.WriteLine("---------");
+
+estados.Remove("BA");
+estados["SP"] = "São Paulo - foi alterado";
+
+foreach (var item in estados)
+{
+    Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+}
+
+
+string chave = "BA";
+Console.WriteLine($"Verificando o elemento: {chave}");
+
+if(estados.ContainsKey(chave))
+{
+    Console.WriteLine($"Valor existente: {chave}");
+}
+else
+{
+    Console.WriteLine($"Não existe. É possivel adicionar a chave: {chave}");
+}
+
+
+
+
+
+
+
+
+/*
+exemplo de pilha
+
+Stack<int> pilha = new Stack<int>();
+
+pilha.Push(2);
+pilha.Push(4);
+pilha.Push(6);
+pilha.Push(8);
+
+foreach (int item in pilha)
+{
+    Console.WriteLine(item);
+}
+
+Console.WriteLine($"Removendo o elemento: {pilha.Pop()}");
+pilha.Push(20);
+
+foreach (int item in pilha)
+{
+    Console.WriteLine(item);
+}
+*/
+
+
+/*
+exemplo de fila
+
+Queue<int> fila = new Queue<int>();
+
+fila.Enqueue(2);
+fila.Enqueue(4);
+fila.Enqueue(6);
+fila.Enqueue(8);
+
+foreach (int item in fila)
+{
+    Console.WriteLine(item);
+}
+
+Console.WriteLine($"Removendo o elemento: {fila.Dequeue()}");
+fila.Enqueue(10);
+foreach (int item in fila)
+{
+    Console.WriteLine(item);
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+lendo arquivo 
+string[] linhas = File.ReadAllLines("Arquivos/arquivoLeitura.txt");
+
+foreach (string linha in linhas)
+{
+    Console.WriteLine(linha);
+}
+
+
+simulando exceção
+try 
+{
+    string[] linhas = File.ReadAllLines("Arquivos/arquivo-Leitura.txt");
+    foreach (string linha in linhas)
+    {
+        Console.WriteLine(linha);
+    }
+} 
+catch(Exception ex)
+{
+    Console.WriteLine($"Ocorreu uma exceção genérica. {ex.Message}");
+}
+finally
+{
+    Console.WriteLine("Chegou até aqui");
+}
+*/
+
+
+
 
 
 

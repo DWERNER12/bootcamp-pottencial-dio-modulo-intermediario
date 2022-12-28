@@ -3,6 +3,132 @@ using ExemploExplorando.Models;
 using System.Globalization;
 
 
+int numero = 20;
+bool ehPar = false;
+
+ehPar = numero % 2 == 0;
+ Console.WriteLine($"O número {numero} é " + (ehPar ? "par" : "impap"));
+
+// if(numero % 2 == 0) 
+// {
+//     Console.WriteLine($"O número {numero} é par!");
+// }
+// else
+// {
+//     Console.WriteLine($"O número {numero} é impar!");
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+desconstrutor
+Pessoa p1 = new Pessoa("David", "Werner");
+
+(string nome, string sobrenome) = p1;
+
+Console.WriteLine($"{nome} {sobrenome}");
+*/
+
+
+
+
+
+
+
+
+
+/*
+tupla usando metodo
+LeituraArquivo arquivo = new LeituraArquivo();
+
+var (sucesso, linhasArquivo, _) = arquivo.LerArquivo("Arquivos/arquivoLeitura.txt");
+
+if(sucesso)
+{
+    //Console.WriteLine($"Quantidade linhasdo arquivo: {quantidadeLinhas}");
+    foreach (string linha in linhasArquivo)
+    {
+        Console.WriteLine(linha);
+    }
+
+}
+else
+{
+    Console.WriteLine("Não foi possivel ler o arquivo.");
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+exemplo tupla simples
+(int Id, string Nome, string Sobrenome, decimal Altura) tupla = (1, "David", "Werner", 1.83M);
+
+ValueTuple<int, string, string, decimal> outroExemploTupla = (1, "David", "Werner", 1.83M);// não recomendado
+var outroExemploTuplaCreate = Tuple.Create(1, "David", "Werner", 1.83M);// não recomendado
+
+
+
+Console.WriteLine($"id: {tupla.Id}");
+Console.WriteLine($"Nome: {tupla.Nome}");
+Console.WriteLine($"Sobrenome: {tupla.Sobrenome}");
+Console.WriteLine($"Altura: {tupla.Altura}"); 
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 Dictionary<string, string> estados = new Dictionary<string, string>();
 
 estados.Add("SP", "São Paulo");
@@ -39,6 +165,7 @@ else
 {
     Console.WriteLine($"Não existe. É possivel adicionar a chave: {chave}");
 }
+*/
 
 
 

@@ -13,3 +13,4 @@
 ✔ - Propriedades, Métodos e Construtores com C#<br>
 ✔ - Manipulando Valores com C#<br>
 ✔ - Exceções e Coleções com C#<br>
+✔ - Tuplas, Operador Ternário e Desconstrução de um Objeto com C#<br>

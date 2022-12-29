@@ -14,3 +14,4 @@
 ✔ - Manipulando Valores com C#<br>
 ✔ - Exceções e Coleções com C#<br>
 ✔ - Tuplas, Operador Ternário e Desconstrução de um Objeto com C#<br>
+✔ - Nuget, Serializar e Atributos no C#<br>

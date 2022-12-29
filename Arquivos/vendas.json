@@ -1,0 +1,14 @@
+[
+  {
+    "Id": 1,
+    "Nome_Produto": "Material de escritorio",
+    "Preco": 56.30,
+    "DataVenda": "2022-12-29T19:00:56.2035758-03:00"
+  },
+  {
+    "Id": 2,
+    "Nome_Produto": "Caneta",
+    "Preco": 2.10,
+    "DataVenda": "2022-12-29T19:00:56.2035758-03:00"
+  }
+]

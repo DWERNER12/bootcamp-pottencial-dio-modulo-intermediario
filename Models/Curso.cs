@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace ExemploExplorando.Models
 {
@@ -13,6 +14,11 @@ namespace ExemploExplorando.Models
         public void AdicionarAluno(Pessoa aluno)
         {
             Alunos.Add(aluno);
+
+            string serializado = JsonConvert.SerializeObject(Alunos, Formatting.Indented);
+
+            File.WriteAllText("Arquivos/Alunos.json", serializado);
+            Console.WriteLine(serializado);
         }
 
         public int ObterQuantidadeAlunosMatriculados()

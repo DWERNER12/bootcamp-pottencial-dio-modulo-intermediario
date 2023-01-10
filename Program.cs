@@ -3,18 +3,40 @@ using ExemploExplorando.Models;
 using System.Globalization;
 using Newtonsoft.Json;
 
-string conteudoAquivo = File.ReadAllText("Arquivos/vendas.json");
 
-List<Venda> listaVenda = JsonConvert.DeserializeObject<List<Venda>>(conteudoAquivo);
-
-foreach (Venda venda in listaVenda)
-{
-    Console.WriteLine($"Id: {venda.Id}, Produto: {venda.Produto}, Preço: {venda.Preco}, Data: {venda.DataVenda.ToString("dd/MM/yyyy HH:mm")}");
-}
+Pessoa p = new Pessoa();
 
 
 
 
+//usando contrutor podemos passar os valores do parametro direto no new
+
+//fazendo p set das propriedades 
+//p1.Nome = "David";
+//p1.Sobrenome = "Werner";
+//p1.Idade = 27;
+
+Console.WriteLine("informe o nome:");
+string nome = Console.ReadLine();
+p.Nome = nome;
+Console.WriteLine("informe o sobrenome:");
+string sobrenome = Console.ReadLine();
+p.Sobrenome = sobrenome;
+
+
+Pessoa p2 = new Pessoa();
+p2.Nome = "Mel";
+p2.Sobrenome = "Werner";
+
+p.Apresentar();
+
+Curso cursoDeProgramacao = new Curso();
+cursoDeProgramacao.Nome = "Programação";
+cursoDeProgramacao.Alunos = new List<Pessoa>();
+
+cursoDeProgramacao.AdicionarAluno(p);
+cursoDeProgramacao.AdicionarAluno(p2);
+cursoDeProgramacao.ListarAlunos();
 
 
 
@@ -28,8 +50,7 @@ foreach (Venda venda in listaVenda)
 
 
 /*
-
-serealizar em json
+//Gravar em Json
 DateTime dataAtual = DateTime.Now;
 List<Venda> listaVendas = new List<Venda>();
 
@@ -44,7 +65,17 @@ string serializado = JsonConvert.SerializeObject(listaVendas, Formatting.Indente
 File.WriteAllText("Arquivos/vendas.json", serializado);
 
 Console.WriteLine(serializado);
-*/
+
+
+//ler arquivos Json
+string conteudoAquivo = File.ReadAllText("Arquivos/vendas.json");
+
+List<Venda> listaVenda = JsonConvert.DeserializeObject<List<Venda>>(conteudoAquivo);
+
+foreach (Venda venda in listaVenda)
+{
+    Console.WriteLine($"Id: {venda.Id}, Produto: {venda.Produto}, Preço: {venda.Preco}, Data: {venda.DataVenda.ToString("dd/MM/yyyy HH:mm")}");
+}*/
 
 
 
@@ -413,24 +444,5 @@ Console.WriteLine(valorMonetario.ToString("c", CultureInfo.CreateSpecificCulture
 
 
 
-/*
-//usando contrutor podemos passar os valores do parametro direto no new
-Pessoa p1 = new Pessoa(nome: "David", sobrenome: "Werner");
-fazendo p set das propriedades 
-p1.Nome = "David";
-p1.Sobrenome = "Werner";
-p1.Idade = 27;
 
-Pessoa p2 = new Pessoa();
-p2.Nome = "Mel";
-p2.Sobrenome = "Werner";
-//p1.Idade = 5;
-
-Curso cursoDeProgramacao = new Curso();
-cursoDeProgramacao.Nome = "Programação";
-cursoDeProgramacao.Alunos = new List<Pessoa>();
-
-cursoDeProgramacao.AdicionarAluno(p1);
-cursoDeProgramacao.AdicionarAluno(p2);
-cursoDeProgramacao.ListarAlunos();*/
 

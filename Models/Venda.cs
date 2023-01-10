@@ -8,13 +8,13 @@ namespace ExemploExplorando.Models
 {
     public class Venda
     {
-        // public Venda(int id, string produto, decimal preco, DateTime datavenda)
-        // {
-        //     Id = id;
-        //     Produto = produto;
-        //     Preco = preco;
-        //     DataVenda = datavenda;
-        // }
+         public Venda(int id, string produto, decimal preco, DateTime datavenda)
+         {
+             Id = id;
+             Produto = produto;
+             Preco = preco;
+             DataVenda = datavenda;
+         }
         public int Id { get; set; }
 
         [JsonProperty("Nome_Produto")]

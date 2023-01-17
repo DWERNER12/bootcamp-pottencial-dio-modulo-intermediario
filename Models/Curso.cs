@@ -14,13 +14,12 @@ namespace ExemploExplorando.Models
         public void AdicionarAluno(Pessoa aluno)
         {
             Alunos.Add(aluno);
-
             string serializado = JsonConvert.SerializeObject(Alunos, Formatting.Indented);
 
             File.WriteAllText("Arquivos/Alunos.json", serializado);
             Console.WriteLine(serializado);
+            //Console.WriteLine(Alunos.Count);
         }
-
         public int ObterQuantidadeAlunosMatriculados()
         {
             int quantidade = Alunos.Count;

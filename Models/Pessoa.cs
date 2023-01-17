@@ -11,8 +11,9 @@ namespace ExemploExplorando.Models
         {
 
         }
-        public Pessoa(string nome, string sobrenome)
+        public Pessoa(int id, string nome, string sobrenome)
         {
+            Id = id;
             Nome = nome;
             Sobrenome = sobrenome;
         }
@@ -24,6 +25,7 @@ namespace ExemploExplorando.Models
         // }
         private string _nome;
         private int _idade;
+        public int Id { get; set; }
         public string Nome 
         { 
             get => _nome.ToUpper();

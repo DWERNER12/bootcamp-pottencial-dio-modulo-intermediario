@@ -5,10 +5,6 @@ using Newtonsoft.Json;
 
 
 Pessoa p = new Pessoa();
-
-
-
-
 //usando contrutor podemos passar os valores do parametro direto no new
 
 //fazendo p set das propriedades 
@@ -23,10 +19,9 @@ Console.WriteLine("informe o sobrenome:");
 string sobrenome = Console.ReadLine();
 p.Sobrenome = sobrenome;
 
-
-Pessoa p2 = new Pessoa();
-p2.Nome = "Mel";
-p2.Sobrenome = "Werner";
+// Pessoa p2 = new Pessoa();
+// p2.Nome = "Mel";
+// p2.Sobrenome = "Werner";
 
 p.Apresentar();
 
@@ -35,7 +30,6 @@ cursoDeProgramacao.Nome = "Programação";
 cursoDeProgramacao.Alunos = new List<Pessoa>();
 
 cursoDeProgramacao.AdicionarAluno(p);
-cursoDeProgramacao.AdicionarAluno(p2);
 cursoDeProgramacao.ListarAlunos();
 
 
